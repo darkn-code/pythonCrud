@@ -26,6 +26,8 @@ def create_client(client):
         print('Client already in client\'s list')
 
 def list_clients():
+    print('uid | name | company | email | position ')
+    print('*' * 50)
     for idx, client in enumerate(clients):
         print('{uid} | {name} | {company} | {email} | {position}'.format(uid=idx,name=client['name'],company=client['company'],email= client['email'],position=client['position']))  
 
