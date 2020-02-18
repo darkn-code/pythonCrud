@@ -51,10 +51,9 @@ class ClientService:
 
     def delete_client(self,client_uid):
         clients = self.list_clients()
-        
-        for client in clients:
-            if client['uid'] == client_uid.uid:
-                pass
+        delete_client = [client for client in clients if client['uid'] != client_uid] 
+
+        self._save_to_disk(delete_client)
 
 
 
